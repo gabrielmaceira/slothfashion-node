@@ -1,0 +1,12 @@
+clone:
+  depth: full
+pipelines:
+ branches:
+    development:
+      - step:
+          name: Deploy to GITHUB
+          deployment: GITHUB
+          script:
+            - echo "Deploying to GITHUB"
+            - git push git@github.com:leatrillo/slothfashion-node.git
+          
